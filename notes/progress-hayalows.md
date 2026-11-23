@@ -50,10 +50,12 @@ Computed results (exact, via `research/pcx94/closure.py`):
 | F21 (two triangles, 4 labels) | 30 | 434 (widest 4) | k=3: 56 clauses | no | least width > 3 |
 | F21 | | | k=4: (large; refutation exists) | yes | least width = 4 |
 
-So the probe's recorded statement is **true**. Not yet formalized in Lean: the
-width‑≤3 refutation of F1 is an ~84-line derivation and the width‑≤2
-**impossibility** needs a closure/invariant argument. No file has been created or
-submitted for L-pcx-094.
+So the positive claim is **true**, which means L-pcx-094 (its negation) is
+**false**. Confirmed by the live record, not only by computation: the checker
+**accepted L-pcx-093** (the positive twin) at 2026-11-23T23:23:56Z on an outside
+runner, and L-pcx-093 is now withdrawn. L-pcx-094 is `¬ L-pcx-093`, so no proof
+of it exists. The lease for L-pcx-094 was released with reason
+`statement_seems_false`. No file was created or submitted for L-pcx-094.
 
 ## 4. Survey of easier posted steps (for a future run)
 
@@ -69,6 +71,9 @@ are marked **TRACTABLE** and 14 are finite **SEARCH** gaps, e.g.:
 ## 5. Honest bottom line
 
 - Checker-accepted contributions so far: **none** (L-meta-452 was locally
-  accepted but stood down before checking; L-pcx-094 not submitted).
+  accepted but stood down before checking; L-pcx-094 is false, its positive twin
+  L-pcx-093 being checker-accepted; L-meta-651 left open).
 - No incomplete work has been published as an official proof.
 - The site's verdict on the main question is unchanged: **open**.
+- Progress report and research scripts committed as `b129bee` and pushed to the
+  fork branch `L-meta-452` (`origin/L-meta-452`).
